@@ -67,3 +67,14 @@ button:focus-visible {
 .center {
   text-align: center;
 }
+
+.bold {
+  font-weight: bold;
+}
+
+.counter-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
