@@ -1,6 +1,6 @@
 import useCounterStore from "./store";
 
-export default function Homepage() {
+export default function ExternalStoreActionsPage() {
   const counter = useCounterStore((state) => state.counter);
   const handleIncrement = useCounterStore((state) => state.increment);
   const handleDecrement = useCounterStore((state) => state.decrement);
