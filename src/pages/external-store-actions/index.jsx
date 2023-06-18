@@ -1,20 +1,17 @@
-import useCounterStore from "./store";
+import useCounterStore, { onIncrement, onDecrement, onReset } from "./store";
 
 export default function ExternalStoreActionsPage() {
   const counter = useCounterStore((state) => state.counter);
-  const handleIncrement = useCounterStore((state) => state.increment);
-  const handleDecrement = useCounterStore((state) => state.decrement);
-  const handleReset = useCounterStore((state) => state.reset);
 
   return (
     <>
-      <h2 className="center">Counter Example</h2>
+      <h2 className="center">External Store Actions</h2>
       <div>
         <p className="bold center">Counter Value: {counter}</p>
         <div className="counter-actions">
-          <button onClick={handleIncrement}>Increment</button>
-          <button onClick={handleDecrement}>Decrement</button>
-          <button onClick={handleReset}>Reset</button>
+          <button onClick={onIncrement}>Increment</button>
+          <button onClick={onDecrement}>Decrement</button>
+          <button onClick={onReset}>Reset</button>
         </div>
       </div>
     </>
